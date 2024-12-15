@@ -1,44 +1,68 @@
 # To-Do List Web Application
 
-Welcome to the To-Do List web application! This project aims to provide users with a simple and efficient tool for managing their tasks effectively. Below is a breakdown of the main components and functionalities of the application:
+This project is a **To-Do List Web Application** designed to help users efficiently manage their tasks. It uses PHP for the backend, MySQL for data storage, and jQuery for dynamic behavior. The application allows users to create, view, modify, and delete tasks.
 
-## **Main Page (main.php)**
+## Acknowledgements
 
-### **Overview**
-The main page serves as the user interface for interacting with the To-Do List application. Users can view, create, modify, and delete tasks directly from this page.
+This project was developed in **October, 2023** to learn more about PHP as a backend language, as well as MySQL for data persistence. It showcases how to build an interactive web application with PHP and MySQL.
 
-### **Features**
-- **Task Display**: Displays all tasks stored in the database.
-- **Search Functionality**: Allows users to search for tasks based on various criteria such as title, description, due date, etc.
-- **Sorting**: Enables sorting of tasks based on different attributes (e.g., title, description, due date, etc.).
-- **Task Manipulation**: Provides options to create, modify, and delete tasks.
+---
 
-### **Implementation**
-- **Dynamic Behavior**: Utilizes jQuery for dynamic behavior such as creating, modifying, and deleting tasks without page reloads.
-- **Backend Interaction**: Communicates with the server-side script (server.php) for handling CRUD operations and database interactions.
-- **Database Connectivity**: Establishes a connection to the MySQL database to fetch and manipulate task data.
-- **Session Management**: Utilizes PHP sessions for maintaining user data and state across requests.
+## Features
+- **Task Management**: Add, view, update, and delete tasks.
+- **Search Functionality**: Search tasks by title, description, due date, etc.
+- **Sorting**: Sort tasks by different attributes like title, description, and due date.
+- **User Session Management**: Maintain user data and session state across requests.
+- **Dynamic Behavior**: Use of jQuery to create, modify, and delete tasks without page reloads.
 
-## **Server-side Script (server.php)**
+---
 
-### **Overview**
-The server-side script handles various requests initiated by the main page, such as task creation, modification, deletion, searching, sorting, etc.
+## Directory Structure
 
-### **Features**
-- **Task Creation**: Processes requests to create new tasks and inserts them into the database.
-- **Task Modification**: Handles requests to modify existing tasks and updates the corresponding records in the database.
-- **Task Deletion**: Manages requests to delete tasks and removes them from the database.
-- **Search and Sorting**: Implements functionality for searching tasks based on user-defined criteria and sorting tasks based on different attributes.
+```
+to-do-list-web-app/
+├── main.php                  # Main page for interacting with the To-Do list
+├── server.php                # Backend script for handling CRUD operations
+├── todolist.sql              # Database schema for creating necessary tables
+├── README.md                 # Project documentation
+|── style.css                 # Basic styling using CSS
+└── .*.js                     # jQuery script for dynamic behavior
+```
 
-### **Implementation**
-- **Request Handling**: Identifies and processes different types of requests (e.g., create, modify, delete, search, sort, etc.).
-- **Database Operations**: Executes SQL queries to perform CRUD operations on the tasks table in the MySQL database.
-- **Data Validation**: Sanitizes and validates user input to prevent security vulnerabilities such as SQL injection and XSS attacks.
-- **Session Handling**: Manages PHP sessions to maintain user state and session data across requests.
+---
 
-## **Getting Started**
-1. Clone the repository to your local machine.
-2. Set up a MySQL database and import the provided schema (todolist.sql) to create the necessary tables.
-3. Configure the database connection settings in the server.php file.
-4. Ensure that your web server environment supports PHP.
-5. Access the main.php file through your web browser to start using the To-Do List application.
+## Getting Started
+
+### Prerequisites
+- **PHP**: Ensure you have PHP installed (version 7 or above).
+- **MySQL**: A MySQL database should be set up. The provided `todolist.sql` script will create the necessary database and tables.
+- **Web Server**: Set up a local web server environment (e.g., XAMPP, WAMP) to run the application.
+
+### How to Run
+1. Clone or download the repository:
+    ```
+    git clone https://github.com/your-username/to-do-list-web-application.git
+    ```
+2. Set up the MySQL database:
+    - Open MySQL and run the provided `todolist.sql` script to create the required database and tables.
+3. Configure the database connection in `server.php`.
+4. Ensure your web server supports PHP.
+5. Open `main.php` in your browser to start using the application.
+
+---
+
+## Usage
+This project can be used to:
+- Manage your personal tasks, including setting due dates, descriptions, and priorities.
+- Learn how to build a simple CRUD-based web application using PHP and MySQL.
+- Understand how to use jQuery for dynamic content updates without reloading the page.
+
+---
+
+## Possible Improvements
+- Implement user authentication for securing personal task lists.
+- Add advanced search options and task filters.
+- Enhance the user interface with modern UI frameworks like Bootstrap or TailwindCSS.
+- Implement task prioritization and deadlines with notifications.
+
+---
